@@ -1,0 +1,13 @@
+{
+  "name": "report-templates",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "chokidar 'src/pages/**/*.pug' -c 'npm run build'",
+    "build": "pug src/pages -o dist"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {}
+}

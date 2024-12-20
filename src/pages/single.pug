@@ -1,0 +1,246 @@
+extends ../components/layout.pug
+block variables
+  - var title = 'Отчёт по статистике'
+  - var date = '18.12.2024, 18:55:32'
+  - var contourName = 'TIRC102'
+  - var contourDescription = 'Расход теплоносителя'
+
+block content
+  section.page
+    h1.bold= title
+    p.bold= date
+    br
+    table.ghosted
+      thead
+      tbody
+        tr 
+          td Контур:
+          td= contourName
+        tr 
+          td Описание:
+          td Расход теплоносителя
+        tr
+          td Комментарий:
+          td Lorem, ipsum dolor sit . Quidem!
+    div.separator
+    h2.bold Исследуемый период 1
+    p 16.12.2024, 15:07:39 – 16.12.2024, 15:22:33
+    br
+    include ../components/pictures/period_1.pug
+    br
+    h2.bold Настройки регулятора за исследуемый период 1
+    br
+    table.outlined
+      thead
+        tr
+          th Время установки
+          th.right Кп
+          th.right Ти
+          th.right Тд
+          th.right Тфд
+          th.right Тф
+          th.right П/зона
+      tbody
+        tr
+          td 16.12.2024, 15:07:39
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+        tr
+          td 16.12.2024, 15:07:39
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+        tr
+          td 16.12.2024, 15:07:39
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+
+  section.page
+    h2.bold Исследуемый период 2
+    p 16.12.2024, 15:07:39 – 16.12.2024, 15:22:33
+    br
+    include ../components/pictures/period_1.pug
+    br
+    h2.bold Настройки регулятора за исследуемый период 2
+    br
+    table.outlined
+      thead
+        tr
+          th Время установки
+          th.right Кп
+          th.right Ти
+          th.right Тд
+          th.right Тфд
+          th.right Тф
+          th.right П/зона
+    p За данный период настройки регулятора не изменялись
+
+  section.page
+    h2.bold Сравнительный анализ
+    br
+    div.grid-2
+      div.flex-col
+        include ../components/pictures/pv_&_sp_1.pug
+        p.center.w-full.caption Распределение регулируемой переменной (
+          span.caption.bold.pv.text-pv PV 
+          | и 
+          span.caption.bold.sp.text-sp SP
+          |) за период 1
+      div.flex-col
+        include ../components/pictures/co_1.pug
+        p.center.w-full.caption Распределение выхода регулятора (
+          span.caption.bold.pv.text-co CO
+          |) за период 1
+      div.flex-col
+        include ../components/pictures/pv_&_sp_2.pug
+        p.center.w-full.caption Распределение регулируемой переменной (
+          span.caption.bold.pv.text-pv PV 
+          | и 
+          span.caption.bold.sp.text-sp SP
+          |) за период 2
+      div.flex-col
+        include ../components/pictures/co_2.pug
+        p.center.w-full.caption Распределение выхода регулятора (
+          span.caption.bold.pv.text-co CO
+          |) за период 2
+
+    br
+    table.outlined
+      thead
+        tr
+          th Параметр
+          th Период 1
+          th.right Период 2
+      tbody
+        tr
+          td Среднее значение PV
+          td.right 10
+          td.right 10
+        tr
+          td Среднемодульное отклонение
+          td.right 0.194
+          td.right 0.128
+        tr
+          td Интегрированная абсолютная ошибка
+          td.right 155519
+          td.right 102867
+        tr
+          td СКО
+          td.right 0.238
+          td.right 0.153
+        tr
+          td Количество изменений задания
+          td.right 0
+          td.right 0
+        tr
+          td Суммарный ход клапана
+          td.right 971
+          td.right 116
+        tr
+          td Количество реверсов ИМ
+          td.right 463
+          td.right 266
+        tr
+          td Время в РУ
+          td.right –
+          td.right –
+
+  section.page
+    h2.bold Свойства контура
+    br
+    table.outlined
+      thead
+        tr
+          th Параметр
+          th.left Значение
+      tbody
+        tr
+          td Имя контура
+          td= contourName
+        tr
+          td Описание
+          td= contourDescription
+        tr
+          td Источник данных
+          td OPCHisDataServer123
+        tr
+        tr
+          td Сервер
+          td 10.0.1.39
+        tr
+        tr
+          td Передаточная функция регулятора
+          td YOKOGAWA Centum
+        tr
+        tr
+          td.center-y Формула
+          td
+            include ../components/formulas/YOKOGAWA.pug
+        tr
+        tr
+          td Цикл регулятора
+          td 1 с
+        tr
+        tr
+          td Нормирование входа/выхода
+          td Да
+        tr
+        tr
+          td PV мин.
+          td 0
+        tr
+        tr
+          td PV макс.
+          td 20
+        tr
+        tr
+          td Единицы измерения PV
+          td м³/ч
+        tr
+        tr
+          td CO мин.
+          td 0
+        tr
+        tr
+          td CO макс.
+          td 100
+        tr
+        tr
+          td Единицы измерения CO
+          td %
+        tr
+        tr
+          td Тип объекта
+          td Aвтоопределение
+        tr
+        tr
+          td Тип управления ИМ
+          td Импульстный
+        tr
+        tr
+          td Время полного хода
+          td 60 с
+        tr
+        tr
+          td Минимальное перемещение
+          td 0.2
+        tr
+        tr
+          td ИМ мин.
+          td 0
+        tr
+        tr
+          td ИМ макс.
+          td 100
+        tr

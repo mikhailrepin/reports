@@ -1,0 +1,29 @@
+include ../components/styles.pug
+include ../components/grammar.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  head
+    title #{title}       
+    +styles()
+    +grammar()
+  body
+    block content
+    script.
+      window.onload = function() {
+        // Получаем все элементы section с классом page
+        const pages = document.querySelectorAll('section.page');
+
+        // Проходим по каждому элементу и добавляем номер страницы
+        pages.forEach((page, index) => {
+          const pageNum = index + 1; // Номера страниц начинаются с 1
+          const span = document.createElement('span'); // Создаем новый элемент span
+          span.className = 'page-num'; // Устанавливаем класс
+          span.textContent = `стр. ${pageNum}`; // Устанавливаем текст
+          page.appendChild(span); // Добавляем span в конец текущего элемента section.page
+        });
+      };
