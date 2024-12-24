@@ -7,22 +7,8 @@ block variables
 
 block content
   section.page
-    h1.bold= title
-    p.bold= date
-    br
-    table.ghosted
-      thead
-      tbody
-        tr 
-          td Контур:
-          td= contourName
-        tr 
-          td Описание:
-          td Расход теплоносителя
-        tr
-          td Комментарий:
-          td Lorem, ipsum dolor sit . Quidem!
-    div.separator
+    include ../components/header-primary.pug
+
     h2.bold Исследуемый период 1
     p 16.12.2024, 15:07:39 – 16.12.2024, 15:22:33
     br
@@ -67,6 +53,9 @@ block content
           td.right 10.2
 
   section.page
+    div.w-full.only-print
+      include ../components/header-primary.pug
+
     h2.bold Исследуемый период 2
     p 16.12.2024, 15:07:39 – 16.12.2024, 15:22:33
     br
@@ -87,6 +76,9 @@ block content
     p За данный период настройки регулятора не изменялись
 
   section.page
+    div.w-full.only-print
+      include ../components/header-primary.pug
+
     h2.bold Сравнительный анализ
     br
     div.grid-2
@@ -157,6 +149,9 @@ block content
           td.right –
 
   section.page
+    div.w-full.only-print
+      include ../components/header-primary.pug
+
     h2.bold Свойства контура
     br
     table.outlined
@@ -175,72 +170,54 @@ block content
           td Источник данных
           td OPCHisDataServer123
         tr
-        tr
           td Сервер
           td 10.0.1.39
         tr
-        tr
           td Передаточная функция регулятора
           td YOKOGAWA Centum
-        tr
         tr
           td.center-y Формула
           td
             include ../components/formulas/YOKOGAWA.pug
         tr
-        tr
           td Цикл регулятора
           td 1 с
-        tr
         tr
           td Нормирование входа/выхода
           td Да
         tr
-        tr
           td PV мин.
           td 0
-        tr
         tr
           td PV макс.
           td 20
         tr
-        tr
           td Единицы измерения PV
           td м³/ч
-        tr
         tr
           td CO мин.
           td 0
         tr
-        tr
           td CO макс.
           td 100
-        tr
         tr
           td Единицы измерения CO
           td %
         tr
-        tr
           td Тип объекта
           td Aвтоопределение
-        tr
         tr
           td Тип управления ИМ
           td Импульстный
         tr
-        tr
           td Время полного хода
           td 60 с
-        tr
         tr
           td Минимальное перемещение
           td 0.2
         tr
-        tr
           td ИМ мин.
           td 0
         tr
-        tr
           td ИМ макс.
           td 100
-        tr
