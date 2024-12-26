@@ -1,0 +1,19 @@
+section.flex-col.items-center.w-full
+  div(style="position: relative;").w-full
+    div(style="width: 48px; height: 48px; position: absolute; top: 6px; left: 0;")
+      include ../components/pictures/logo.pug
+    h1(style="margin-bottom: 0;").bold.center= title
+  p(style="margin: 8px 0 16px 0;").bold= date
+  table.ghosted.slim
+    thead
+    tbody
+      tr 
+        td Контур:
+        td= contourName
+      tr 
+        td Описание:
+        td= contourDescription
+      tr
+        td Комментарий:
+        td Lorem, ipsum dolor sit . Quidem!
+  span.separator.w-full

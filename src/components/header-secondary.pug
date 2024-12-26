@@ -1,0 +1,16 @@
+section.flex-row.w-full.items-start(style="gap: var(--size-m);")
+
+  div(style="width: 40px; height: 40px;")
+    include ../components/pictures/logo.pug
+
+  div.flex-col.w-full.items-start
+    h2(style="margin: 0; line-height: 40px; text-transform: uppercase;").bold= title + ' от ' + date
+
+    table.ghosted.slim
+      thead
+      tbody
+        tr 
+          td.medium Контур:
+          td= contourName
+
+span.separator.w-full
