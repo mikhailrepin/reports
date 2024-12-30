@@ -1,0 +1,189 @@
+extends ../components/layout.pug
+block variables
+  - var title = 'Отчёт по расчёту'
+  - var date = '18.12.2024, 18:55:32'
+  - var contourName = 'TIRC102'
+  - var contourDescription = 'Объем выхода полезных фракций'
+  - var comment = 'Расчёт настроек клапана подачи кислородной смеси в емкость АГ-42'
+
+block content
+  section.page
+    include ../components/header-primary.pug
+    h2.bold Идентификация объекта
+    br
+    include ../components/pictures/period_2.pug
+    p.center.w-full Исследуемый период:
+      span= ' ' + date + ' - ' + date
+    br
+    h2.bold Результат идентификации
+    br
+    table.outlined.slim
+      thead
+        tr
+          th Объект
+          th То
+          th τ
+          th Ко
+      tbody
+        tr
+          td С самовыравниванием
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+    br
+    include ../components/pictures/approximation.pug
+    p.center.w-full
+      span(style="color: var(--accent-pv);") ●
+      |  – Регулируемая переменная
+      |  &nbsp;&nbsp;&nbsp;
+      span(style="color: var(--accent-approx);") ●
+      |  – График аппроксимации
+
+  section.page
+    div.w-full.only-print
+      include ../components/header-secondary.pug
+
+    h2.bold Настройки регулятора
+    br
+    table.outlined.slim
+      thead
+        tr
+          th Кп
+          th Ти
+          th Тд
+          th Тфд
+          th Тф
+          th П/зона
+      tbody
+        tr
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+    br
+    h2.bold Моделирование
+    br
+    table.outlined.slim
+      thead
+        tr
+          th Параметр
+          th Значение
+      tbody
+        tr
+          td Тип возмущения
+          td Нагрузка
+        tr
+          td Величина возмущения
+          td 10
+        tr
+          td Шум
+          td Сгенерированный (0.5)
+        tr
+          td Время моделирования 33
+          td 102
+    br
+    br
+    include ../components/pictures/process_pv.pug
+    p.center.w-full
+      span(style="color: var(--accent-pv); opacity: 0.5;") ●
+      |  – Рассчитанные настройки
+      |  &nbsp;&nbsp;&nbsp;
+      span(style="color: var(--accent-pv);") ●
+      |  – Экспертные настройки
+      |  &nbsp;&nbsp;&nbsp;
+      span(style="color: var(--accent-sp);") ●
+      |  – SP
+    br
+    include ../components/pictures/process_co.pug
+    p.center.w-full
+      span(style="color: var(--accent-co); opacity: 0.5;") ●
+      |  – Рассчитанные настройки
+      |  &nbsp;&nbsp;&nbsp;
+      span(style="color: var(--accent-co);") ●
+      |  – Экспертные настройки
+
+  section.page
+    div.w-full.only-print
+      include ../components/header-secondary.pug
+
+    h2.bold Параметры САР при моделировании
+    br
+    table.outlined
+      thead
+        tr
+          th Тип объекта
+          th То
+          th τ
+          th Ко
+      tbody
+        tr
+          td Апериодический
+          td.right 10.2
+          td.right 10.2
+          td.right 10.2
+
+    br
+    br
+    table.outlined
+      thead
+        tr
+          th Параметры<br>регулятора
+          th Базовые
+          th Экспертные
+      tbody
+        tr
+          td Кп
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Ти
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Тд
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Тф
+          td.right 10.2
+          td.right 10.2
+        tr
+          td П/зона
+          td.right 10.2
+          td.right 10.2
+        tr
+          td minИМ
+          td.right 10.2
+          td.right 10.2
+
+    br
+    br
+    table.outlined
+      thead
+        tr
+          th Переходный<br>процесс
+          th Базовые
+          th Экспертные
+      tbody
+        tr
+          td Время регулирования
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Выбег PV
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Перерегулирование PV
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Ход И.М.
+          td.right 10.2
+          td.right 10.2
+        tr
+          td Количество реверсов ИМ
+          td.right 10.2
+          td.right 10.2
