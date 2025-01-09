@@ -273,13 +273,24 @@ mixin styles()
       display: none;
     }
 
+    .wrap-header {
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      line-height: 1.5rem !important;
+    }
+
     @media print {
+      .wrap-header {
+        max-width: 600px;
+      }
+
       .page {
         width: 750px;
         box-shadow: none;
         background: #fff;
         margin: 0;
-        padding: 24px;
+        padding: 0 24px;
       }
 
       .only-print {

@@ -4,7 +4,7 @@ section.flex-row.w-full.items-start(style="gap: var(--size-m);")
     include ../components/pictures/logo.pug
 
   div.flex-col.w-full.items-start
-    h2(style="margin: 0; line-height: 40px; text-transform: uppercase;").bold= title + ' от ' + date
+    h2.wrap-header(style="margin: 0; text-transform: uppercase;").bold= title + ' от ' + date
 
     table.ghosted.slim
       thead

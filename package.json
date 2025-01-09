@@ -6,10 +6,10 @@
     "build": "pug src/pages -o dist",
     "serve": "live-server dist"
   },
-  "dependencies": {
-    "chokidar": "^3.5.1",
-    "live-server": "^1.2.2",
-    "pug": "^3.0.2"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "chokidar": "^4.0.3",
+    "live-server": "^1.2.0",
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }

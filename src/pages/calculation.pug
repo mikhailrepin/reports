@@ -23,7 +23,7 @@ block content
           th Объект
           th То
           th τ
-          th Ко
+          th.right Ко
       tbody
         tr
           td С самовыравниванием
@@ -43,48 +43,48 @@ block content
     div.w-full.only-print
       include ../components/header-secondary.pug
 
-    h2.bold Настройки регулятора
-    br
-    table.outlined.slim
-      thead
-        tr
-          th Кп
-          th Ти
-          th Тд
-          th Тфд
-          th Тф
-          th П/зона
-      tbody
-        tr
-          td.right 10.2
-          td.right 10.2
-          td.right 10.2
-          td.right 10.2
-          td.right 10.2
-          td.right 10.2
-    br
-    h2.bold Моделирование
-    br
-    table.outlined.slim
-      thead
-        tr
-          th Параметр
-          th Значение
-      tbody
-        tr
-          td Тип возмущения
-          td Нагрузка
-        tr
-          td Величина возмущения
-          td 10
-        tr
-          td Шум
-          td Сгенерированный (0.5)
-        tr
-          td Время моделирования 33
-          td 102
-    br
-    br
+    div.flex-col.center(style="gap: var(--size-xl); margin-bottom: calc(var(--size-3xl) * 1.2)")
+      h2.bold Настройки регулятора
+
+      table.outlined.slim
+        thead
+          tr
+            th Кп
+            th Ти
+            th Тд
+            th Тфд
+            th Тф
+            th.right П/зона
+        tbody
+          tr
+            td 10.2
+            td 10.2
+            td 10.2
+            td 10.2
+            td 10.2
+            td.right 10.2
+
+      h2.bold Моделирование
+
+      table.outlined.slim
+        thead
+          tr
+            th Параметр
+            th Значение
+        tbody
+          tr
+            td Тип возмущения
+            td Нагрузка
+          tr
+            td Величина возмущения
+            td 10
+          tr
+            td Шум
+            td Сгенерированный (0.5)
+          tr
+            td Время моделирования
+            td 102
+
     include ../components/pictures/process_pv.pug
     p.center.w-full
       span(style="color: var(--accent-pv); opacity: 0.5;") ●
@@ -109,81 +109,78 @@ block content
       include ../components/header-secondary.pug
 
     h2.bold Параметры САР при моделировании
-    br
-    table.outlined
-      thead
-        tr
-          th Тип объекта
-          th То
-          th τ
-          th Ко
-      tbody
-        tr
-          td Апериодический
-          td.right 10.2
-          td.right 10.2
-          td.right 10.2
 
-    br
-    br
-    table.outlined
-      thead
-        tr
-          th Параметры<br>регулятора
-          th Базовые
-          th Экспертные
-      tbody
-        tr
-          td Кп
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Ти
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Тд
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Тф
-          td.right 10.2
-          td.right 10.2
-        tr
-          td П/зона
-          td.right 10.2
-          td.right 10.2
-        tr
-          td minИМ
-          td.right 10.2
-          td.right 10.2
+    div.flex-col(style="gap: calc(var(--size-3xl) * 1.5); padding: calc(var(--size-3xl) * 1.5) 0")
+      table.outlined
+        thead
+          tr
+            th Тип объекта
+            th.right То
+            th.right τ
+            th.right Ко
+        tbody
+          tr
+            td Апериодический
+            td.right 10.2
+            td.right 10.2
+            td.right 10.2
 
-    br
-    br
-    table.outlined
-      thead
-        tr
-          th Переходный<br>процесс
-          th Базовые
-          th Экспертные
-      tbody
-        tr
-          td Время регулирования
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Выбег PV
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Перерегулирование PV
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Ход И.М.
-          td.right 10.2
-          td.right 10.2
-        tr
-          td Количество реверсов ИМ
-          td.right 10.2
-          td.right 10.2
+      table.outlined
+        thead
+          tr
+            th Параметры регулятора
+            th.right Базовые
+            th.right Экспертные
+        tbody
+          tr
+            td Кп
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Ти
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Тд
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Тф
+            td.right 10.2
+            td.right 10.2
+          tr
+            td П/зона
+            td.right 10.2
+            td.right 10.2
+          tr
+            td minИМ
+            td.right 10.2
+            td.right 10.2
+
+      table.outlined
+        thead
+          tr
+            th Переходный процесс
+            th Базовые
+            th Экспертные
+        tbody
+          tr
+            td Время регулирования
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Выбег PV
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Перерегулирование PV
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Ход И.М.
+            td.right 10.2
+            td.right 10.2
+          tr
+            td Количество реверсов ИМ
+            td.right 10.2
+            td.right 10.2
