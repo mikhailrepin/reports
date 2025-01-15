@@ -2,13 +2,13 @@
   "name": "report-templates",
   "version": "1.0.0",
   "scripts": {
-    "watch": "chokidar 'src/pages/**/*.pug' -c 'npm run build'",
+    "watch": "nodemon --watch src/pages --ext pug --exec 'npm run build'",
     "build": "pug src/pages -o dist",
     "serve": "live-server dist"
   },
   "devDependencies": {
-    "chokidar": "^4.0.3",
-    "live-server": "^1.2.0",
+    "nodemon": "^3.0.2",
+    "live-server": "^1.2.2",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6"
   }
