@@ -15,14 +15,14 @@ html(lang="ru")
     block content
     script.
       window.onload = function() {
-
         const pages = document.querySelectorAll('section.page');
+        const totalPages = pages.length;
 
         pages.forEach((page, index) => {
-          const pageNum = index + 1; 
-          const span = document.createElement('span'); 
+          const currentPage = index + 1;
+          const span = document.createElement('span');
           span.className = 'page-num';
-          span.textContent = `стр. ${pageNum}`;
+          span.textContent = `стр. ${currentPage} / ${totalPages}`;
           page.appendChild(span);
         });
       };

@@ -1,15 +1,19 @@
-section.flex-row.w-full.items-start(style="gap: var(--size-m);")
+section.flex-col.w-full.items-start(style="gap: var(--size-s);")
 
-  div(style="width: 40px; height: 40px;")
-    include ../components/pictures/logo.pug
+  div.flex-row.w-full.items-center(style="gap: var(--size-s); padding-bottom: var(--size-xs); border-bottom: 1px solid var(--border-color-strong);")
+    div(style="width: 32px; height: 32px;")
+      include ../components/pictures/logo.pug
+    h2.bold САР-эксперт
 
-  div.flex-col.w-full.items-start
-    h2.wrap-header(style="margin: 0; text-transform: uppercase;").bold= title + ' от ' + date
+  div.flex-col.w-full.items-start(style="padding-left: 0px;")
+    //- p.wrap-header(style="margin: 0; text-transform: uppercase;").bold= title + ' от ' + date
 
     table.ghosted.slim
-      thead
       tbody
-        tr 
+        tr
+          td.medium Тип отчёта:
+          td.bold= title + ' от ' + date
+        tr
           td.medium Контур:
           td= contourName
         tr 

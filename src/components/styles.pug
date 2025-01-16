@@ -6,7 +6,7 @@ mixin styles()
       --accent-co: rgba(68, 168, 84, 1);
       --accent-approx: rgba(236, 143, 76, 1);
 
-      --text-color: #000;
+      --text-color: rgba(0, 0, 0, 1);
       --window-background: #F9F9F9;
       --page-background: #FFFFFF;
       --border-color-light: rgba(201, 204, 214, 0.2);
@@ -84,8 +84,8 @@ mixin styles()
       height: 1px;
       width: 100%;
       position: relative;
-      margin: var(--size-l) 0;
-      border-bottom: 2px solid var(--border-color-strong);
+      margin: var(--size-s) 0;
+      border-bottom: 1px solid var(--border-color-strong);
     }
 
     .separator::after,
@@ -264,7 +264,7 @@ mixin styles()
     .page-num {
       display: none;
       position: absolute;
-      top: 12px;
+      top: 32px;
       right: 20px;
       font-size: 12px;
     }
@@ -290,7 +290,7 @@ mixin styles()
         box-shadow: none;
         background: #fff;
         margin: 0;
-        padding: 0 24px;
+        padding: 16px 24px !important;
       }
 
       .only-print {
