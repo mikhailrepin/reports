@@ -2,13 +2,11 @@
   "name": "report-templates",
   "version": "1.0.0",
   "scripts": {
-    "watch": "nodemon --watch src/pages --ext pug --exec 'npm run build'",
-    "build": "pug src/pages -o dist",
-    "serve": "live-server dist"
+    "watch": "npx nodemon --watch src/pages --ext pug --exec 'npm run build'",
+    "build": "npx pug src/pages -o dist"
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
-    "live-server": "^1.2.2",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6"
   }
